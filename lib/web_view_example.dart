@@ -7,7 +7,8 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'load_file_on_ram.dart';
 
 class WebViewExample extends StatefulWidget {
-  const WebViewExample({Key? key}) : super(key: key);
+  final String title;
+  const WebViewExample({Key? key, required this.title}) : super(key: key);
 
   @override
   WebViewExampleState createState() => WebViewExampleState();
@@ -24,14 +25,20 @@ class WebViewExampleState extends State<WebViewExample> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: WebView(
-        initialUrl: 'about:blank',
-        // initialUrl: 'file://assets/bereshit.pdf',
-        onWebViewCreated: (WebViewController webViewController) {
-          _controller = webViewController;
-          _loadHtmlFromAssets();
-        },
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: WebView(
+          initialUrl: 'about:blank',
+          // initialUrl: 'file://assets/bereshit.pdf',
+          onWebViewCreated: (WebViewController webViewController) {
+            _controller = webViewController;
+            _loadHtmlFromAssets();
+          },
+        ),
       ),
     );
   }

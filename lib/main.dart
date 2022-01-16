@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_pdf_webviewer/pdf_plataform_view.dart';
 
-import 'my_home_page.dart';
+import 'web_view_example.dart';
 import 'pdf_viewer_plugin.dart';
 
 void main() {
@@ -48,7 +48,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const PdfViewerPlugin(),
+                        builder: (_) => const PdfViewerPlugin(title:'PdfViewerPlugin'),
                       ));
                 },
                 child: const Text('PdfViewerPlugin'),
@@ -58,7 +58,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const PdfPlataformView(),
+                        builder: (_) => const PdfPlataformView(title:'PdfPlataformView'),
                       ));
                 },
                 child: const Text('PdfPlataformView'),
@@ -68,7 +68,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const WebViewExample(),
+                        builder: (_) => const WebViewExample(title:'WebViewExample'),
                       ));
                 },
                 child: const Text('WebViewExample'),

@@ -9,7 +9,8 @@ import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 import 'load_file_on_ram.dart';
 
 class PdfViewerPlugin extends StatefulWidget {
-  const PdfViewerPlugin({Key? key}) : super(key: key);
+  final String title;
+  const PdfViewerPlugin({Key? key, required this.title}) : super(key: key);
 
   @override
   _PdfViewerPluginState createState() => _PdfViewerPluginState();
@@ -49,7 +50,7 @@ class _PdfViewerPluginState extends State<PdfViewerPlugin> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: const Text('Plugin example app'),
+        title: Text(widget.title),
         centerTitle: true,
       ),
       body: Center(

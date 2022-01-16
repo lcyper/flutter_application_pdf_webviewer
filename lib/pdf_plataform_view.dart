@@ -9,7 +9,8 @@ import 'package:pdf_platform_view/pdf_platform_view.dart';
 import 'load_file_on_ram.dart';
 
 class PdfPlataformView extends StatefulWidget {
-  const PdfPlataformView({Key? key}) : super(key: key);
+  final String title;
+  const PdfPlataformView({Key? key, required this.title}) : super(key: key);
 
   @override
   _PdfPlataformViewState createState() => _PdfPlataformViewState();
@@ -68,7 +69,10 @@ class _PdfPlataformViewState extends State<PdfPlataformView> {
     //     progress: progress));
     return Scaffold(
       backgroundColor: Colors.yellow,
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
       body: file != null
           ? PdfView(
               file: file,
