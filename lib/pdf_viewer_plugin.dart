@@ -50,7 +50,7 @@ class _PdfViewerPluginState extends State<PdfViewerPlugin> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: Text(widget.title),
+        title: FittedBox(child: Text(widget.title)),
         centerTitle: true,
       ),
       body: Center(

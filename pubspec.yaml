@@ -38,7 +38,9 @@ dependencies:
   path_provider: ^2.0.8
   http: ^0.13.4
   pdf_viewer_plugin: ^2.0.1
-  pdf_platform_view: ^0.6.0
+  # pdf_platform_view: ^0.6.0 #deprecated version of the Android embedding
+  pdf_render: ^1.0.19
+  # flutter_pdfview: ^1.2.1 #blanco al cambiar orientacion
 
 dev_dependencies:
   flutter_test:

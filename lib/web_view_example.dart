@@ -27,7 +27,7 @@ class WebViewExampleState extends State<WebViewExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: FittedBox(child: Text(widget.title)),
         centerTitle: true,
       ),
       body: SafeArea(

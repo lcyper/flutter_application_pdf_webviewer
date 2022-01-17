@@ -88,6 +88,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   http:
     dependency: "direct main"
     description:
@@ -102,6 +107,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3"
   lints:
     dependency: transitive
     description:
@@ -123,13 +135,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  native_device_orientation:
-    dependency: transitive
-    description:
-      name: native_device_orientation
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.3"
   path:
     dependency: transitive
     description:
@@ -186,13 +191,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
-  pdf_platform_view:
+  pdf_render:
     dependency: "direct main"
     description:
-      name: pdf_platform_view
+      name: pdf_render
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "1.0.19"
   pdf_viewer_plugin:
     dependency: "direct main"
     description:

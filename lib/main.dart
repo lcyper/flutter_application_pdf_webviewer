@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_pdf_webviewer/pdf_plataform_view.dart';
 
+// import 'flutter_pdfview.dart';
+// import 'pdf_plataform_view.dart';
+import 'pdf_render.dart';
 import 'web_view_example.dart';
 import 'pdf_viewer_plugin.dart';
 
@@ -40,39 +42,66 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // home: const PdfViewerPlugin(),
-              // home: PdfPlataformView(),
-              // home: const WebViewExample(),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const PdfViewerPlugin(title:'PdfViewerPlugin'),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const PdfViewerPlugin(
+                          title: 'PdfViewerPlugin - sin controller'),
+                    ),
+                  );
                 },
                 child: const Text('PdfViewerPlugin'),
               ),
+              // ---------------
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //           builder: (_) => const PdfPlatformView(
+              //               title:
+              //                   'PdfPlatformView - controller, pero deprecated'),
+              //         ));
+              //   },
+              //   child: const Text('PdfPlataformView'),
+              // ),
+              // --------------
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const PdfPlataformView(title:'PdfPlataformView'),
-                      ));
-                },
-                child: const Text('PdfPlataformView'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const WebViewExample(title:'WebViewExample'),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const WebViewExample(
+                          title: 'WebViewExample - android no funciona'),
+                    ),
+                  );
                 },
                 child: const Text('WebViewExample'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const PdfRender(title: 'pdf_render'),
+                    ),
+                  );
+                },
+                child: const Text('PdfRender - me gusta'),
+              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //           builder: (_) => const FlutterPdfview(
+              //               title: 'flutter_pdfview - con controller'),
+              //         ));
+              //   },
+              //   child: const Text('flutter_pdfview'),
+              // ),
             ],
           ),
         ),
