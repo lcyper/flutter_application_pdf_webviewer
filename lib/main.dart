@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'flutter_pdfview.dart';
 // import 'pdf_plataform_view.dart';
 import 'pdf_render.dart';
+import 'syncfusion_flutter_pdfviewer.dart';
 import 'web_view_example.dart';
 import 'pdf_viewer_plugin.dart';
 
@@ -102,6 +103,17 @@ class MyHomePage extends StatelessWidget {
               //   },
               //   child: const Text('flutter_pdfview'),
               // ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const SyncfusionFlutterPdfviewer(title: 'syncfusion_flutter_pdfviewer'),
+                    ),
+                  );
+                },
+                child: const Text('syncfusion_flutter_pdfviewer'),
+              ),
             ],
           ),
         ),
