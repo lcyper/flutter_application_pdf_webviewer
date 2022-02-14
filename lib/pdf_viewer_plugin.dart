@@ -53,23 +53,15 @@ class _PdfViewerPluginState extends State<PdfViewerPlugin> {
         title: FittedBox(child: Text(widget.title)),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            if (pdfFlePath != null)
-              Expanded(
-                // TODO: Cambiar configuracion en: (espacio entre hojas y color)
-                // https://github.com/lubritto/pdf_viewer_plugin/issues/18#issuecomment-592581177
-                // file://C:\flutter\.pub-cache\hosted\pub.dartlang.org\pdf_viewer_plugin-2.0.1\android\src\main\java\dev\britto\pdf_viewer_plugin\PdfViewer.java
-                child: PdfView(
-                  path: pdfFlePath!,
-                ),
-              )
-            else
-              const Center(child: CircularProgressIndicator()),
-          ],
-        ),
-      ),
+      body: pdfFlePath != null
+          ?
+          // TODO: Cambiar configuracion en: (espacio entre hojas y color)
+          // https://github.com/lubritto/pdf_viewer_plugin/issues/18#issuecomment-592581177
+          // file://C:\flutter\.pub-cache\hosted\pub.dartlang.org\pdf_viewer_plugin-2.0.1\android\src\main\java\dev\britto\pdf_viewer_plugin\PdfViewer.java
+          PdfView(
+              path: pdfFlePath!,
+            )
+          : const Center(child: CircularProgressIndicator()),
     );
   }
 }
