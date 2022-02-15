@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // import 'flutter_pdfview.dart';
 // import 'pdf_plataform_view.dart';
+import 'flutter_cached_pdfview.dart';
+import 'flutter_pdfview.dart';
 import 'pdf_render.dart';
 import 'syncfusion_flutter_pdfviewer.dart';
 import 'web_view_example.dart';
@@ -43,18 +45,18 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => const PdfViewerPlugin(
-                          title: 'PdfViewerPlugin - sin controller'),
-                    ),
-                  );
-                },
-                child: const Text('PdfViewerPlugin'),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //         builder: (_) => const PdfViewerPlugin(
+              //             title: 'PdfViewerPlugin - sin controller'),
+              //       ),
+              //     );
+              //   },
+              //   child: const Text('PdfViewerPlugin'),
+              // ),
               // ---------------
               // ElevatedButton(
               //   onPressed: () {
@@ -101,18 +103,31 @@ class MyHomePage extends StatelessWidget {
               //               title: 'flutter_pdfview - con controller'),
               //         ));
               //   },
-              //   child: const Text('flutter_pdfview'),
+              //   child: const Text('flutter_pdfview - orientation change error'),
               // ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => const SyncfusionFlutterPdfviewer(title: 'syncfusion_flutter_pdfviewer'),
+                      builder: (_) => const SyncfusionFlutterPdfviewer(
+                          title: 'syncfusion_flutter_pdfviewer'),
                     ),
                   );
                 },
                 child: const Text('syncfusion_flutter_pdfviewer'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const FlutterCachedPdfview(
+                          title: 'flutter_cached_pdfview'),
+                    ),
+                  );
+                },
+                child: const Text('flutter_cached_pdfview'),
               ),
             ],
           ),

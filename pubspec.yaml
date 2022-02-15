@@ -38,11 +38,13 @@ dependencies:
   flutter_inappwebview: ^5.3.2
   path_provider: ^2.0.8
   http: ^0.13.4
-  pdf_viewer_plugin: ^2.0.1
+  # pdf_viewer_plugin: ^2.0.1
   # pdf_platform_view: ^0.6.0 #deprecated version of the Android embedding
   pdf_render: ^1.0.19
   syncfusion_flutter_pdfviewer: ^19.4.50-beta
   # flutter_pdfview: ^1.2.1 #blanco al cambiar orientacion
+  flutter_cached_pdfview: ^0.4.1
+  # uc_pdfview: ^0.0.3
 
 dev_dependencies:
   flutter_test:

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
+// import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 
 import 'load_file_on_ram.dart';
 
@@ -53,15 +53,17 @@ class _PdfViewerPluginState extends State<PdfViewerPlugin> {
         title: FittedBox(child: Text(widget.title)),
         centerTitle: true,
       ),
-      body: pdfFlePath != null
-          ?
+      body:
+          //  pdfFlePath != null
+          //     ?
           // TODO: Cambiar configuracion en: (espacio entre hojas y color)
           // https://github.com/lubritto/pdf_viewer_plugin/issues/18#issuecomment-592581177
           // file://C:\flutter\.pub-cache\hosted\pub.dartlang.org\pdf_viewer_plugin-2.0.1\android\src\main\java\dev\britto\pdf_viewer_plugin\PdfViewer.java
-          PdfView(
-              path: pdfFlePath!,
-            )
-          : const Center(child: CircularProgressIndicator()),
+          // PdfView(
+          //     path: pdfFlePath!,
+          //   )
+          // :
+          const Center(child: CircularProgressIndicator()),
     );
   }
 }

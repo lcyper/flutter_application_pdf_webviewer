@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
+// import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:path_provider/path_provider.dart';
 import 'load_file_on_ram.dart';
 
@@ -52,7 +52,7 @@ class _FlutterPdfviewState extends State<FlutterPdfview> {
 
   // final _controller = PdfViewController();
   int currentPage = 0;
-  late final PDFViewController pdfViewerController;
+  // late final PDFViewController pdfViewerController;
 
   @override
   Widget build(BuildContext context) {
@@ -64,31 +64,34 @@ class _FlutterPdfviewState extends State<FlutterPdfview> {
         title: FittedBox(child: Text(widget.title)),
         centerTitle: true,
       ),
-      body: file != null
-          ? PDFView(
-              fitEachPage: true,
-              filePath: file!.path,
-              enableSwipe: true,
-              // swipeHorizontal: true,
-              autoSpacing: false,
-              pageFling: false,
-              onRender: (_pages) {
-                print('total pages: $_pages');
-              },
-              onError: (error) {
-                print(error.toString());
-              },
-              onPageError: (page, error) {
-                print('$page: ${error.toString()}');
-              },
-              onViewCreated: (PDFViewController pdfViewController) {
-                pdfViewerController = pdfViewController;
-              },
-              onPageChanged: (int? page, int? total) {
-                print('page change: $page/$total');
-              },
-            )
-          : const Center(child: CircularProgressIndicator()),
+      body:
+          //  file != null
+          //     ? PDFView(
+          //         fitEachPage: true,
+          //         filePath: file!.path,
+          //         enableSwipe: true,
+          //         pageSnap: false,
+          //         // swipeHorizontal: true,
+          //         autoSpacing: false,
+          //         pageFling: false,
+          //         onRender: (_pages) {
+          //           print('total pages: $_pages');
+          //         },
+          //         onError: (error) {
+          //           print(error.toString());
+          //         },
+          //         onPageError: (page, error) {
+          //           print('$page: ${error.toString()}');
+          //         },
+          //         onViewCreated: (PDFViewController pdfViewController) {
+          //           pdfViewerController = pdfViewController;
+          //         },
+          //         onPageChanged: (int? page, int? total) {
+          //           print('page change: $page/$total');
+          //         },
+          //       )
+          //     :
+          const Center(child: CircularProgressIndicator()),
     );
   }
 }
