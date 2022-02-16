@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 // import 'flutter_pdfview.dart';
 // import 'pdf_plataform_view.dart';
 import 'flutter_cached_pdfview.dart';
-import 'flutter_pdfview.dart';
 import 'pdf_render.dart';
 import 'syncfusion_flutter_pdfviewer.dart';
 import 'web_view_example.dart';
-import 'pdf_viewer_plugin.dart';
 
 void main() {
   // flutter run --no-sound-null-safety
@@ -129,6 +127,7 @@ class MyHomePage extends StatelessWidget {
                 },
                 child: const Text('flutter_cached_pdfview'),
               ),
+         
             ],
           ),
         ),
